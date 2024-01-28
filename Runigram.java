@@ -180,7 +180,7 @@ public class Runigram {
 		int newRed = (int)((weightC1 * c1.getRed()) + (weightC2 * c2.getRed()));
 		int newBlue = (int)((weightC1 * c1.getBlue()) + (weightC2 * c2.getBlue()));
 		int newGreen = (int)((weightC1 * c1.getGreen()) + (weightC2 * c2.getGreen()));
-		Color newColor = new Color(newRed ,newBlue, newGreen);
+		Color newColor = new Color(newRed ,newGreen, newBlue);
 		return newColor;
 	}
 	
