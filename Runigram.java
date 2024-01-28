@@ -174,14 +174,14 @@ public class Runigram {
 	 * values in the two input color.
 	 */
 
-	public static Color blend(Color c1, Color c2, double alpha) {
-		int newRed =(int)(alpha * c1.getRed()+ (1-alpha) * c2.getRed());
-		int newGreen =(int)(alpha * c1.getGreen()+ (1-alpha) * c2.getGreen());
-		int newBlue =(int)(alpha * c1.getBlue()+ (1-alpha) * c2.getBlue());
+	 public static Color blend(Color c1, Color c2, double alpha) {
+		int red =(int)(alpha * c1.getRed()+ (1-alpha) * c2.getRed());
+		int green =(int)(alpha * c1.getGreen()+ (1-alpha) * c2.getGreen());
+		int blue =(int)(alpha * c1.getBlue()+ (1-alpha) * c2.getBlue());
 
-		Color blended = new Color(newRed,newGreen,newBlue);
+		Color blenColor = new Color(red,green,blue);
 
-		return blended;
+		return blenColor;
 	}
 	
 	/**
@@ -196,8 +196,8 @@ public class Runigram {
 		Color[][] imageBlend = new Color[height][width];
 
 		
-		for (int i = 0; i < height; i++){
-			for (int j = 0; j < width; j++){
+		for (int i=0; i<height;i++){
+			for (int j=0; j<width; j++){
 				
 				imageBlend[i][j] = blend(image1[i][j], image2[i][j], alpha);
 			}
