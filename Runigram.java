@@ -73,6 +73,7 @@ public class Runigram {
 		//// Replace this comment with your code
 		for (int i = 0; i < image.length; i++ ){
 			for (int j = 0; j < image[i].length; j++) {
+				// #feedback - you should use the above print(Color c) function instead of implementing it again here.
 				Color color = image[i][j];
 				int red = color.getRed();
 				int blue = color.getBlue();
@@ -219,6 +220,7 @@ public class Runigram {
 	 */
 	public static void morph(Color[][] source, Color[][] target, int n) {
 		//// Replace this comment with your code
+		// #feedback - you should first scale the target image to the dimensions of the source image.
 		Color [][] finalImage = new Color [source.length][source[0].length];
 		double alpha = 0;
 		for (int i = 0; i <= n ; i++) {
